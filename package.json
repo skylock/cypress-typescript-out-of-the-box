@@ -1,0 +1,16 @@
+{
+  "name": "cypress-tyepscript-out-of-the-box",
+  "version": "1.0.0",
+  "description": "Cypress & typescript out of the box. Version 4.4.0 & up only.",
+  "scripts": {
+    "test": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "author": "Skylock",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "~4.4.0",
+    "typescript": "~3.8.3"
+  }
+}
