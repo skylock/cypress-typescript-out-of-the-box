@@ -8,5 +8,8 @@
   },
   "include": [
     "**/*.ts"
+  ],
+  "files": [
+    "support/index.d.ts"
   ]
 }

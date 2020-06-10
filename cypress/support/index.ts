@@ -12,12 +12,6 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
-// If your specs files are in TypeScript, 
-// you should include the TypeScript definition file, 
-// cypress/support/index.d.ts, with the rest of the source files.
-import '../support/index.d'
-
 // Import commands.js using ES2015 syntax:
 import './commands'
 
