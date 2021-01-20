@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "strict": true,
+    "noImplicitAny": false,
     "baseUrl": "../node_modules/cypress",
-    "target": "es5",
-    "lib": ["es5", "dom"],
-    "types": ["cypress"]
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "types": ["cypress", "node"]
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "files": [
-    "support/index.d.ts"
-  ]
+  "include": ["**/*.ts"],
+  "files": ["support/index.d.ts"]
 }
