@@ -5,7 +5,9 @@
     "baseUrl": "../node_modules/cypress",
     "target": "es6",
     "lib": ["es6", "dom"],
-    "types": ["cypress", "node"]
+    "types": ["cypress", "node"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts"],
   "files": ["support/index.d.ts"]

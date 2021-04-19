@@ -13,7 +13,11 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+
+// Datetime formatter
+import * as dateFns from 'date-fns';
+Cypress.dateFns = () => dateFns;
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

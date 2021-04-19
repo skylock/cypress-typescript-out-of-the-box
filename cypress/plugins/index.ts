@@ -1,6 +1,11 @@
 /// <reference types="cypress" />
+require('cypress-watch-and-reload/plugins');
 
-export default (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {
+export default (
+  on: Cypress.PluginEvents,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  config: Cypress.PluginConfigOptions
+): void => {
   on('before:browser:launch', (browser, launchOptions) => {
     if (browser.family === 'chromium' && browser.name !== 'electron') {
       // Mac/Linux
@@ -11,6 +16,6 @@ export default (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) =
       console.log(' ########### Executed on before:browser:launch');
     }
 
-    return launchOptions
-  })
-}
+    return launchOptions;
+  });
+};
