@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-require('cypress-watch-and-reload/plugins');
 
 export default (
   on: Cypress.PluginEvents,
