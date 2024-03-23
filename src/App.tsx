@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { About } from './About';
 import { Dashboard } from './Dasboard';
+import { CountProvider } from './count-context';
 
 export default function App() {
   return (
@@ -17,18 +18,20 @@ export default function App() {
       {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='dashboard' element={<Dashboard />} />
+      <CountProvider>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='dashboard' element={<Dashboard />} />
 
-          {/* Using path="*"" means "match anything", so this route
+            {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
-          <Route path='*' element={<NoMatch />} />
-        </Route>
-      </Routes>
+            <Route path='*' element={<NoMatch />} />
+          </Route>
+        </Routes>
+      </CountProvider>
     </div>
   );
 }
