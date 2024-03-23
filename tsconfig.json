@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "types": ["cypress", "@testing-library/cypress"]
   },
   "include": ["./src"]
 }
